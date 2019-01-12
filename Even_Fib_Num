@@ -1,0 +1,8 @@
+def even_fib_num():
+    fib = [0, 1]
+    [fib.append(fib[-1] + fib[-2]) for x in range(1000) if fib[-1] + fib[-2] < 4000000]
+    print(sum(num for num in fib if num % 2 == 0))
+
+
+if __name__ == '__main__':
+    even_fib_num()
