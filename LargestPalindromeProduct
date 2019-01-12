@@ -1,0 +1,19 @@
+def palindrome(number):
+    if number == number[::-1]:
+        return True
+    return False
+
+
+def large_palindrome():
+    max_palindrome_number = 0
+    for i in range(100, 999):
+        for j in range(100, 999):
+            if palindrome(str(i*j)):
+                if max_palindrome_number < i*j:
+                    max_palindrome_number = i*j
+
+    return max_palindrome_number
+
+
+if __name__ == '__main__':
+    print(large_palindrome())
