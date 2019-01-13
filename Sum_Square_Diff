@@ -1,0 +1,8 @@
+def sum_square_diff():
+    num = range(1, 101)
+    numsq = sum(num)
+    return numsq * numsq - sum(i*i for i in num)
+
+
+if __name__ == '__main__':
+    print(sum_square_diff())
