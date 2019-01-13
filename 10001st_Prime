@@ -1,0 +1,19 @@
+def prime_numb():
+    numb = 3
+    prime = [2]
+    while True:
+        Flag = False
+        for i in range(0, len(prime)):
+            if numb % prime[i] == 0:
+                Flag = True
+                numb = numb + 1
+                break
+        if not Flag:
+            prime.append(numb)
+            numb = numb + 1
+        if len(prime) == 10001:
+            return prime[10000]
+
+
+if __name__ == '__main__':
+    print(prime_numb())
