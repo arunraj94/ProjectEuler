@@ -1,0 +1,12 @@
+def sum(n,k):
+    d = n//k
+    return k * (d * (d + 1)) // 2
+
+def multiples(N):
+    return sum(N, 3) + sum(N, 5) - sum(N, 15)
+
+if __name__ == '__main__':
+    tc = int(input())
+    for i in range(0,tc):
+        N = input()
+        print(multiples(int(N)-1))
