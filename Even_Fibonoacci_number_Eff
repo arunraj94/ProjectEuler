@@ -1,0 +1,21 @@
+import math
+
+# Deriving fromula to calculate only even fibonacci numbers
+def even_fib_num(N):
+    fib_2 = 2
+    fib_1 = 8
+    sum = 2
+    while(fib_1 < N):
+        sum = sum + fib_1
+        fib_1,fib_2 = 4*fib_1+fib_2,fib_1
+        
+    return sum
+
+# Using Binet Problem
+def fib_num(n):
+    sqrt5 = math.sqrt(5)
+    return round((pow((1 + sqrt5), n) - pow((1 - sqrt5), n)) / (pow(2, n) * sqrt5))
+
+
+if __name__ == '__main__':
+    print(fib_num(8))
